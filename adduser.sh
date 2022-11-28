@@ -19,6 +19,9 @@ if [ $? -ne 0 ];
   then
 	sudo useradd -m $username;
 	echo "$username user has been added!"      
+	
+        echo "Enter password for $username"      
+	sudo passwd $username;
 
 #Notify that user already exist and exit script
   else
